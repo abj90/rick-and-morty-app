@@ -1,4 +1,13 @@
-<div>
-  <app-search-characters></app-search-characters>
-  <app-characters-cards-container></app-characters-cards-container>
+<div class="main-page">
+  <div class="banner-section">
+    <app-search-characters
+      (refreshData)="refreshData($event)"
+    ></app-search-characters>
+  </div>
+
+  <div class="characters-section">
+    <app-characters-cards-container
+      [query]="query"
+    ></app-characters-cards-container>
+  </div>
 </div>
