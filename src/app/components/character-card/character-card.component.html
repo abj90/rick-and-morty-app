@@ -1,1 +1,14 @@
-<p>character-card works!</p>
+<article class="card">
+  <div class="card-img">
+    <img src="{{ character.image }}" width="100%" />
+  </div>
+  <div class="card-content">
+    <a [routerLink]="['/character', character.id]"
+      ><h1>{{ character.name }}</h1></a
+    >
+    <h4>{{ character.status }}-{{ character.species }}</h4>
+    <h5>Last known location</h5>
+    <h4>{{ character.location.name }}</h4>
+    º
+  </div>
+</article>

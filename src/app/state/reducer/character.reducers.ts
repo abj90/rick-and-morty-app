@@ -1,18 +1,18 @@
 import { createReducer, on } from '@ngrx/store';
-import { ICharacterState } from '@models/interfaces';
-import { loadCharacters, LoadedCharacters } from '@actions/character.actions';
+import { ICharactersState } from '@models/interfaces';
+import { ApiError, LoadedCharacters } from '@actions/character.actions';
 
-export const initialState: ICharacterState = {
-  loading: false,
+export const initialState: ICharactersState = {
   characters: null,
+  error: null,
 };
 
 export const charactersReducer = createReducer(
   initialState,
-  on(loadCharacters, (state) => {
-    return { ...state, loading: true };
-  }),
   on(LoadedCharacters, (state, { characters }) => {
-    return { ...state, loading: false, characters };
+    return { ...state, characters, error: null };
+  }),
+  on(ApiError, (state, { error }) => {
+    return { ...state, error, characters: null };
   })
 );

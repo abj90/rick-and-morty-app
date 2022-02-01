@@ -1,5 +1,38 @@
-<section>
-  <app-character-card
-    *ngFor="let character of characters$ | async"
-  ></app-character-card>
+<section class="characters-card-section">
+  <div
+    class="characters-card-container"
+    *ngIf="characters; else characterNotFound"
+  >
+    <div class="pagination-container">
+      <pagination-controls
+        class="my-pagination"
+        [responsive]="responsive"
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onPageChange($event)"
+        [maxSize]="maxSize"
+        [directionLinks]="directionLinks"
+      >
+      </pagination-controls>
+    </div>
+    <div class="cards-container">
+      <app-character-card
+        *ngFor="
+          let character of characters
+            | paginate
+              : {
+                  itemsPerPage: pageSize,
+                  currentPage: page,
+                  totalItems: requestInfo.count
+                }
+        "
+        [character]="character"
+      ></app-character-card>
+    </div>
+  </div>
+  <ng-template #characterNotFound>
+    <div style="width: 300px; height: 300; background-color: aquamarine">
+      <h1>Did it!</h1>
+    </div>
+  </ng-template>
 </section>

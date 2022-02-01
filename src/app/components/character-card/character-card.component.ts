@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { ICharacter } from '@models/interfaces';
 
 @Component({
   selector: 'app-character-card',
   templateUrl: './character-card.component.html',
-  styleUrls: ['./character-card.component.sass']
+  styleUrls: ['./character-card.component.sass'],
 })
-export class CharacterCardComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class CharacterCardComponent {
+  @Input() character: ICharacter;
 }

@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { EffectsModule } from '@ngrx/effects';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +16,6 @@ import { ROOT_REDUCER } from './state/app.state';
 import { SearchCharactersComponent } from './components/search-characters/search-characters.component';
 import { DetailCharacterPageComponent } from './components/detail-character-page/detail-character-page.component';
 import { CharactersCardsContainerComponent } from './components/characters-cards-container/characters-cards-container.component';
-import { EffectsModule } from '@ngrx/effects';
 import { CharactersEffects } from './state/effects/character.effects';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CharactersEffects } from './state/effects/character.effects';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    NgxPaginationModule,
     HttpClientModule,
     StoreModule.forRoot(ROOT_REDUCER),
     StoreDevtoolsModule.instrument({ name: 'TEST' }),

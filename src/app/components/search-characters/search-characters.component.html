@@ -1,1 +1,8 @@
-<p>search-characters works!</p>
+<input
+  type="text"
+  #inputEl
+  placeholder="Search...."
+  (keyup)="onKey(inputEl.value)"
+  (keyup.enter)="onSearch()"
+/>
+<button (click)="onSearch()">Search</button>

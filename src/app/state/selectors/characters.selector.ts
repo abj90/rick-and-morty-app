@@ -1,15 +1,23 @@
 import { createSelector } from '@ngrx/store';
-import { ICharacterState } from '@models/interfaces';
-import { AppState } from '../app.state';
 
-export const selectCharactersFeature = (state: AppState) => state.characters;
+import { ICharactersState, ICharacterState } from '@models/interfaces';
+import { AppState } from '@state/app.state';
+
+export const getCharactersData = (state: AppState) => state.characters;
+export const getCharacterData = (state: AppState) => state.character;
+export const getError = (state: AppState) => state.characters.error;
 
 export const selectCharacters = createSelector(
-  selectCharactersFeature,
-  (state: ICharacterState) => state.characters?.results
+  getCharactersData,
+  (state: ICharactersState) => state.characters
 );
 
-export const selectLoading = createSelector(
-  selectCharactersFeature,
-  (state: ICharacterState) => state.loading
+export const selectCharacter = createSelector(
+  getCharacterData,
+  (state: ICharacterState) => state.character
+);
+
+export const selectError = createSelector(
+  getError,
+  (state: ICharactersState) => state.error
 );
