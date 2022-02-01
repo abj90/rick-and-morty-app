@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable } from 'rxjs';
-import { ICharacter, ICharacterRequest } from '../models/interfaces';
+
+import { ICharacter, ICharacterRequest } from '@models/interfaces';
 import { environment } from 'environments/environment';
 
 @Injectable({

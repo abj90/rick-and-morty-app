@@ -35,7 +35,12 @@ export interface ICharacter {
   created: string;
 }
 
-export interface ICharacterState {
-  loading: boolean;
+export interface ICharactersState {
   characters: ICharacterRequest | null;
+  error: any;
+}
+
+export interface ICharacterState {
+  character: ICharacter | null;
+  error: any;
 }
