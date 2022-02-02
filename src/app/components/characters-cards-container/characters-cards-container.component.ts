@@ -12,6 +12,7 @@ import { selectCharacters } from '@selectors/characters.selector';
 import { AppState } from '@state/app.state';
 import { ICharacter, IInfo } from '@models/interfaces';
 import { getCharacters } from '@state/actions/character.actions';
+import { QUERY } from '@shared/constants';
 
 @Component({
   selector: 'app-characters-cards-container',
@@ -31,8 +32,8 @@ export class CharactersCardsContainerComponent implements OnInit, OnChanges {
   constructor(private store: Store<AppState>) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!changes['query'].firstChange) {
-      this.query = changes['query'].currentValue;
+    if (!changes[QUERY].firstChange) {
+      this.query = changes[QUERY].currentValue;
       this.searchCharacter(this.query);
     }
   }
@@ -45,7 +46,7 @@ export class CharactersCardsContainerComponent implements OnInit, OnChanges {
     });
   }
 
-  searchCharacter(query: string) {
+  searchCharacter(query: string): void {
     this.page = 1;
     this.getCharacterData(query, this.page);
   }
