@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -33,6 +34,7 @@ import { CharactersEffects } from './state/effects/character.effects';
     BrowserModule,
     NgxPaginationModule,
     HttpClientModule,
+    FormsModule,
     StoreModule.forRoot(ROOT_REDUCER),
     StoreDevtoolsModule.instrument({ name: 'TEST' }),
     EffectsModule.forRoot([CharactersEffects]),
