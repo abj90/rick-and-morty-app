@@ -1,2 +1,27 @@
-<button (click)="onBack()">Go back</button>
-<p>detail-character-page works!</p>
+<section>
+  <div class="main-container">
+    <div *ngIf="character" class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="{{ character.image }}"
+            alt="Avatar"
+            style="width: 400px; height: 400px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <h1>Name: {{ character.name }}</h1>
+          <span class="status">
+            <span [ngClass]="statusIcon"></span>
+            <h1>{{ character.status }}</h1>
+          </span>
+          <h1>Species: {{ character.species }}</h1>
+          <h1>Origin: {{ character.origin.name }}</h1>
+        </div>
+      </div>
+    </div>
+    <button class="go-back-btn" (click)="onBack()" type="button">
+      GET ME HOME
+    </button>
+  </div>
+</section>
