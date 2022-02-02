@@ -15,10 +15,36 @@
     .my-pagination ::ng-deep .ngx-pagination a
         color: #FFFFFF !important
 
-
 .cards-container
     display: flex
     align-items: center
     justify-content: center
     flex-wrap: wrap
 
+.character-not-found-wapper
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
+    margin-top: 8px
+
+    .img
+        width: 56%
+
+    p
+        color: #FFFFFF
+
+$large: 1280px
+$medium: 992px
+
+@media screen and (min-width: $medium)
+   .character-not-found-wapper
+        .img
+            width: 56%
+
+@media screen and (min-width: $large)
+    .character-not-found-wapper
+        .img
+            width: 100%

@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-characters.component.sass'],
 })
 export class SearchCharactersComponent {
-  @Output() refreshData = new EventEmitter<string>();
+  @Output() refreshData: EventEmitter<string> = new EventEmitter<string>();
   public query: string = '';
 
   ngOnInit(): void {}

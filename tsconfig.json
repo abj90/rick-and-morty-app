@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -7,6 +6,7 @@
       "@assets/*": ["assets/*"],
       "@models/*": ["app/models/*"],
       "@services/*": ["app/services/*"],
+      "@shared/*": ["app/shared/*"],
       "@state/*": ["app/state/*"],
       "@actions/*": ["app/state/actions/*"],
       "@effects/*": ["app/state/effects/*"],
