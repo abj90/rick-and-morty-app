@@ -1,10 +1,15 @@
-<div class="search-container">
-  <input
-    type="text"
-    #inputEl
-    placeholder="Search...."
-    (keyup)="onKey(inputEl.value)"
-    (keyup.enter)="onSearch()"
-  />
-  <button (click)="onSearch()">Search</button>
-</div>
+<section class="search-container">
+  <div class="search">
+    <input
+      #inputEl
+      type="text"
+      class="searchTerm"
+      placeholder="Search character.."
+      (keyup)="onKey(inputEl.value)"
+      (keyup.enter)="onSearch()"
+    />
+    <button type="submit" (click)="onSearch()" class="searchButton">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</section>
