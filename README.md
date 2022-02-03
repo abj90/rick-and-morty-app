@@ -1,27 +1,24 @@
-# RickAndMortyApp
+## Project Instructions 🔖
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+⚡️⚡️⚡️ Welcome to Rick and Morty App ⚡️⚡️⚡️
 
-## Development server
+## Getting started 🔨
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run `npm install`
+- Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
+### Development Environment and Architecture 🧰
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- NgRx (not that familiar with it.However, it was really intereting =D)
+- API of Rick & Morty
 
-## Build
+### External Js libraries added
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+-ngx-pagination (reason: It´s a simple solution for pagination in Angular)
 
-## Running unit tests
+##### Learn More 📚
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Angular https://angular.io/
+- API of Rick & Morty: https://rickandmortyapi.com
+- ngx-pagination: https://www.npmjs.com/package/ngx-pagination
